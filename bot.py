@@ -1,5 +1,6 @@
 import discord
 import os
+import asyncio
 
 client = discord.Client()
 @client.event
@@ -13,7 +14,7 @@ async def on_message(message):
     if message.content.startswith('hello'):
         await message.channel.send(f'Hey {message.author.name}!!!')
     if message.content.startswith('hi'):
-        await asyncio.sleep(10)
+        await asyncio.sleep(8)
         await message.channel.send(f'Hi {message.author.name} 😁')
 
 @client.event
